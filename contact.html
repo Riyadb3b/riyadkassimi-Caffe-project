@@ -1,25 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Riyad Kassimi | Contact</title>
-<link rel="stylesheet" href="style.css" />
-<script defer src="script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riyad Kassimi | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-<header class="site-header">
-<a class="logo" href="index.html">Riyad Kassimi</a>
-</header>
-<main class="card">
-<h1>Contact</h1>
-<form id="bookingForm">
-<input name="name" placeholder="Name" />
-<button type="submit">Send</button>
-</form>
-</main>
-<footer class="site-footer">
-<p>© <span data-year></span> Riyad Kassimi</p>
-</footer>
+  <header class="site-header">
+    <a class="logo" href="index.html">Riyad Kassimi</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" data-nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-btn" type="button" data-theme-btn>Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Contact</h1>
+      <p class="muted">Form validation and success message (coursework demo).</p>
+
+      <form class="form" id="bookingForm" novalidate>
+        <label>
+          Full Name
+          <input type="text" name="name" required minlength="2" placeholder="e.g., Riyad Kassimi" />
+          <small class="error" data-err="name"></small>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="e.g., name@email.com" />
+          <small class="error" data-err="email"></small>
+        </label>
+
+        <label>
+          Date
+          <input type="date" name="date" required />
+          <small class="error" data-err="date"></small>
+        </label>
+
+        <label>
+          Guests
+          <select name="guests" required>
+            <option value="">Select...</option>
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+          <small class="error" data-err="guests"></small>
+        </label>
+
+        <label>
+          Message (optional)
+          <textarea name="message" rows="4" placeholder="Write your message..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Submit</button>
+
+        <div class="card success" id="successBox" hidden>
+          <h2>Sent!</h2>
+          <p id="successText">Thanks — your request was recorded.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Details</h2>
+      <p><strong>Name:</strong> Riyad Kassimi</p>
+      <p><strong>Email:</strong> example@email.com</p>
+      <p class="muted">Replace with real details if needed.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year></span> Riyad Kassimi</p>
+    <p class="muted">HTML/CSS/JS coursework project</p>
+  </footer>
 </body>
 </html>
