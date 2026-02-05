@@ -1,24 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Riyad Kassimi | Gallery</title>
-<link rel="stylesheet" href="style.css" />
-<script defer src="script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riyad Kassimi | Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-<header class="site-header">
-<a class="logo" href="index.html">Riyad Kassimi</a>
-</header>
-<main class="card">
-<h1>Gallery</h1>
-<button class="btn" id="loadCoffeeBtn">Load Image</button>
-<img id="coffeeImg" />
-<p id="coffeeStatus"></p>
-</main>
-<footer class="site-footer">
-<p>© <span data-year></span> Riyad Kassimi</p>
-</footer>
+  <header class="site-header">
+    <a class="logo" href="index.html">Riyad Kassimi</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" data-nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-btn" type="button" data-theme-btn>Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>Gallery</h1>
+      <p class="muted">Public endpoint demo + simple filtering.</p>
+
+      <div class="api-card">
+        <h2>Random Image (Public Endpoint)</h2>
+        <p class="muted">Loads an image from public sources using JavaScript.</p>
+
+        <button class="btn" type="button" id="loadCoffeeBtn">Load Image</button>
+
+        <div class="api-box">
+          <img id="coffeeImg" alt="Image from public endpoint" />
+          <p class="muted small-note" id="coffeeStatus"></p>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="filter-row">
+        <button class="btn btn-outline" type="button" data-filter="all">All</button>
+        <button class="btn btn-outline" type="button" data-filter="coffee">Coffee</button>
+        <button class="btn btn-outline" type="button" data-filter="food">Food</button>
+        <button class="btn btn-outline" type="button" data-filter="inside">Inside</button>
+      </div>
+
+      <div class="gallery-grid" data-gallery>
+        <div class="ph" data-tag="coffee"><span>Coffee 1</span></div>
+        <div class="ph" data-tag="food"><span>Food 1</span></div>
+        <div class="ph" data-tag="inside"><span>Inside 1</span></div>
+        <div class="ph" data-tag="coffee"><span>Coffee 2</span></div>
+        <div class="ph" data-tag="food"><span>Food 2</span></div>
+        <div class="ph" data-tag="inside"><span>Inside 2</span></div>
+      </div>
+
+      <p class="muted small-note">Filtering uses JavaScript.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year></span> Riyad Kassimi</p>
+    <p class="muted">HTML/CSS/JS coursework project</p>
+  </footer>
 </body>
 </html>
