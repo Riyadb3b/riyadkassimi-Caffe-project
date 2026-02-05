@@ -10,7 +10,9 @@
 <body>
   <header class="site-header">
     <a class="logo" href="index.html">Riyad Kassimi</a>
+
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
     <nav class="site-nav" data-nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -22,14 +24,44 @@
   </header>
 
   <main>
-    <section class="card">
+    <section class="hero card">
       <h1>Welcome</h1>
-      <p>This is a multi-page HTML, CSS and JavaScript project.</p>
+      <p>This is a simple multi-page website project made using HTML, CSS, and JavaScript.</p>
+      <div class="hero-actions">
+        <a class="btn" href="menu.html">See “Menu” Page</a>
+        <a class="btn btn-outline" href="contact.html">Contact Form</a>
+      </div>
+      <p class="small-note muted">Gallery page loads an image from public endpoints.</p>
+    </section>
+
+    <section class="grid-3">
+      <article class="card">
+        <h2>Clean Layout</h2>
+        <p>Consistent design across 5 pages using one CSS file.</p>
+      </article>
+      <article class="card">
+        <h2>JavaScript Features</h2>
+        <p>Theme toggle, FAQ accordion, filters, form validation.</p>
+      </article>
+      <article class="card">
+        <h2>Public Endpoint</h2>
+        <p>Gallery page loads images from public sources.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Website Goals</h2>
+      <ul class="list">
+        <li>Simple navigation and structure</li>
+        <li>Mobile-friendly design</li>
+        <li>Interactive features using JavaScript</li>
+      </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>© <span data-year></span> Riyad Kassimi</p>
+    <p class="muted">HTML/CSS/JS coursework project</p>
   </footer>
 </body>
 </html>
