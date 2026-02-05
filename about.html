@@ -8,15 +8,56 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-<header class="site-header">
-<a class="logo" href="index.html">Riyad Kassimi</a>
-</header>
-<main class="card">
-<h1>About</h1>
-<p>This website demonstrates basic web development skills.</p>
-</main>
-<footer class="site-footer">
-<p>© <span data-year></span> Riyad Kassimi</p>
-</footer>
+  <header class="site-header">
+    <a class="logo" href="index.html">Riyad Kassimi</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" data-nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-btn" type="button" data-theme-btn>Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h1>About</h1>
+      <p>
+        This website was made as a multi-page project using HTML, CSS and JavaScript.
+        It demonstrates layout, responsiveness, and simple interactions.
+      </p>
+
+      <h2>Features</h2>
+      <ul class="list">
+        <li>5 HTML pages</li>
+        <li>1 CSS file for styling</li>
+        <li>1 JavaScript file for interactivity</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>FAQ</h2>
+
+      <div class="faq">
+        <button class="faq-q" type="button" aria-expanded="false">What is this project for?</button>
+        <div class="faq-a" hidden><p>A coursework project to practice web development skills.</p></div>
+
+        <button class="faq-q" type="button" aria-expanded="false">What JavaScript is used?</button>
+        <div class="faq-a" hidden><p>Theme toggle, navigation menu, filters, form validation, and public endpoints.</p></div>
+
+        <button class="faq-q" type="button" aria-expanded="false">Is it mobile friendly?</button>
+        <div class="faq-a" hidden><p>Yes, it uses responsive CSS and a mobile menu.</p></div>
+      </div>
+
+      <p class="muted small-note">FAQ uses JavaScript accordion.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year></span> Riyad Kassimi</p>
+    <p class="muted">HTML/CSS/JS coursework project</p>
+  </footer>
 </body>
 </html>
